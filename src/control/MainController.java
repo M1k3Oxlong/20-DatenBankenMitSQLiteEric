@@ -49,6 +49,13 @@ public class MainController {
      */
     public void printLastQuery(){
         //TODO 01: siehe Kommentar
+        if(dbConnector.getErrorMessage() == null){
+            System.out.println(dbConnector.getCurrentQueryResult());
+        }else{
+            System.out.println(dbConnector.getErrorMessage());
+        }
+
+
     }
 
 
